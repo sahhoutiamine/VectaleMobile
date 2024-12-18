@@ -25,4 +25,6 @@
     <string name="bienvenue">Bienvenue</string>
     <string name="bienvenido">Bienvenido</string>
     <string name="welcomeJapanese">ようこそ</string>
+    <string name="bus_stations">Bus Stations</string>
+    <string name="click_vectale_to_log_in">click vectale to log in</string>
 </resources>

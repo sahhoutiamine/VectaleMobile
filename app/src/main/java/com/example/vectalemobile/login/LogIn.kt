@@ -34,9 +34,9 @@ class LogIn : Fragment() {
         switchToSignUpButton.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
        }
-        val vectaleLogo = view.findViewById<ImageView>(R.id.vectaleLogo)
+        val vectaleLogoLI = view.findViewById<ImageView>(R.id.vectaleLogo)
 
-        vectaleLogo.setOnClickListener {
+        vectaleLogoLI.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.vectalia.ma/safi/presentation"))
             startActivity(intent)
         }

@@ -4,6 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FF0000</color>
     <color name="vectaleColor">#10B981</color>
+    <color name="vectaleColorBg">#2910B981</color>
     <color name="dGrey">#1E1D1B</color>
     <color name="customBlue">#2196F3</color>
 
