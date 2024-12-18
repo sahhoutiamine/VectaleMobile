@@ -22,6 +22,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainPage"/>
+        <activity android:name=".NavFrActivity"/>
+        <activity android:name=".BusActivity"/>
     </application>
 
 </manifest>
