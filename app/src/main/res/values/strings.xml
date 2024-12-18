@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">VectaleMobile</string>
+    <string name="vectale">Vectale</string>
+    <string name="vectaleTitle">VECTALE</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email_or_code">Email or Code :</string>
+    <string name="verify_password">Verify Password</string>
+    <string name="telephone">phone</string>
+    <string name="nom">Name</string>
+    <string name="prenom">last Name</string>
+    <string name="date_naissense">Date Naissense</string>
+    <string name="adresse">Address</string>
+    <string name="cin">CNI</string>
+    <string name="cne">CNE</string>
+    <string name="sign_up_to_vectale">Sign Up to Vectale</string>
+    <string name="or">or</string>
+    <string name="required">Required</string>
+    <string name="are_you_new">Are you New ?</string>
+    <string name="log_in">Log In</string>
+    <string name="welcome">Welcome</string>
+    <string name="willkommen">Willkommen</string>
+    <string name="welcomeArabic">أهلا وسهلا</string>
+    <string name="bienvenue">Bienvenue</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="welcomeJapanese">ようこそ</string>
+</resources>
