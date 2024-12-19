@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Modern Text Style -->
+    <style name="TextStyle">
+        <!-- Font family: Clean and elegant -->
+        <item name="android:fontFamily">monospace</item>
+
+        <!-- Font weight and style -->
+        <item name="android:textStyle">bold</item>
+
+        <!-- Size: Accessible and responsive -->
+        <item name="android:textSize">18sp</item>
+
+        <!-- Line spacing for better readability -->
+        <item name="android:lineSpacingExtra">4dp</item>
+
+
+        <!-- Text alignment -->
+        <item name="android:textAlignment">center</item> <!-- Align left-to-right based on locale -->
+
+    </style>
+    <style name="TitleTextStyle">
+    <!-- Font family: Medium weight sans-serif for clean and modern look -->
+    <item name="android:fontFamily">monospace</item>
+
+    <!-- Text size: Large for clear emphasis -->
+    <item name="android:textSize">24sp</item>
+
+
+
+    <!-- Alignment: Left aligned for natural reading -->
+    <item name="android:textAlignment">center</item>
+
+    <!-- Extra spacing between lines -->
+    <item name="android:lineSpacingExtra">2dp</item>
+
+    <!-- Style: Bold for strong visual hierarchy -->
+    <item name="android:textStyle">bold</item>
+
+
+</style>
+</resources>

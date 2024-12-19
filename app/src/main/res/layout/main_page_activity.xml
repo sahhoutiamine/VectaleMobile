@@ -16,7 +16,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_2" />
+        app:srcCompat="@drawable/logo" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/busCardView"
@@ -37,18 +37,18 @@
 
             <TextView
                 android:id="@+id/first_name"
-                android:layout_width="190dp"
-                android:layout_height="30dp"
+                style="@style/TextStyle"
+                android:layout_width="125dp"
+                android:layout_height="25dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="70dp"
-                android:layout_marginEnd="50dp"
+                android:layout_marginEnd="109dp"
                 android:layout_toStartOf="@+id/user_icon"
                 android:text="ABDERRAZAK"
                 android:textColor="#000000"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/last_name"
@@ -56,11 +56,12 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/first_name"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="25dp"
+                android:layout_marginStart="26dp"
                 android:layout_marginTop="10dp"
                 android:text="ERRIFAOUY"
+                style="@style/TextStyle"
                 android:textColor="#000000"
-                android:textSize="16sp" />
+                android:textSize="16sp"/>
 
             <ImageView
                 android:id="@+id/user_icon"
@@ -80,10 +81,10 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="38dp"
                 android:layout_marginBottom="30dp"
+                style="@style/TextStyle"
                 android:text="code"
                 android:textColor="#000000"
-                android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/code_number"
@@ -93,6 +94,7 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginEnd="21dp"
                 android:layout_marginBottom="30dp"
+                style="@style/TextStyle"
                 android:text="213456982"
                 android:textColor="#000000"
                 android:textSize="14sp" />
@@ -116,7 +118,6 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
         app:cardCornerRadius="20dp"
-        app:cardElevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/busCardView">

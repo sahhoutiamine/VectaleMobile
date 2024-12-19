@@ -107,7 +107,7 @@ class SignUp : Fragment(R.layout.signup_activity) {
                     pwVerTextLayout.error = null
                     pwVerTextLayout.isErrorEnabled = false
                 } else {
-                    pwVerTextLayout.error = "Passwords do not match!"
+                    pwVerTextLayout.error = "Passwords don't match!"
                     pwVerTextLayout.isErrorEnabled = true
                     verPasswordField.addTextChangedListener { text ->
 
@@ -129,7 +129,7 @@ class SignUp : Fragment(R.layout.signup_activity) {
                     emailTextLayout.error = null
                     emailTextLayout.isErrorEnabled = false
                 }else {
-                    emailTextLayout.error = "email is not correct"
+                    emailTextLayout.error = "email is incorrect"
                     emailTextLayout.isErrorEnabled = true
                     emailField.addTextChangedListener { text ->
 
@@ -150,7 +150,7 @@ class SignUp : Fragment(R.layout.signup_activity) {
                     cniTextLayout.error = null
                     cniTextLayout.isErrorEnabled = false
                 }else {
-                    cniTextLayout.error = "CIN is not correct"
+                    cniTextLayout.error = "CIN is incorrect"
                     cniTextLayout.isErrorEnabled = true
                     cniField.addTextChangedListener { text ->
 
@@ -171,7 +171,7 @@ class SignUp : Fragment(R.layout.signup_activity) {
                     cneTextLayout.error = null
                     cneTextLayout.isErrorEnabled = false
                 }else {
-                    cneTextLayout.error = "CNE is not correct"
+                    cneTextLayout.error = "CNE is incorrect"
                     cneTextLayout.isErrorEnabled = true
                     cneField.addTextChangedListener { text ->
 
@@ -196,7 +196,7 @@ class SignUp : Fragment(R.layout.signup_activity) {
                     dateNTextLayout.error = null
                     dateNTextLayout.isErrorEnabled = false
                 }else {
-                    dateNTextLayout.error = "birthday is not correct"
+                    dateNTextLayout.error = "birthday is incorrect"
                     dateNTextLayout.isErrorEnabled = true
                     dateNaissanceField.addTextChangedListener { text ->
 
