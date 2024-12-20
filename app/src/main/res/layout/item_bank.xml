@@ -10,16 +10,14 @@
         android:id="@+id/bankName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bank Name"
-        android:textSize="16sp"/>
+        style="@style/TitleTextStyle"/>
 
 
     <TextView
         android:id="@+id/bankNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bank Number"
-        android:textSize="14sp"
+        style="@style/TextStyle"
         android:layout_marginTop="8dp"/>
 
 

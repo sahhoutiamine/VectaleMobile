@@ -9,6 +9,8 @@ import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -129,7 +131,7 @@ class SignUp : Fragment(R.layout.signup_activity) {
                     emailTextLayout.error = null
                     emailTextLayout.isErrorEnabled = false
                 }else {
-                    emailTextLayout.error = "email is incorrect"
+                    emailTextLayout.error = "email format is incorrect"
                     emailTextLayout.isErrorEnabled = true
                     emailField.addTextChangedListener { text ->
 
@@ -150,7 +152,7 @@ class SignUp : Fragment(R.layout.signup_activity) {
                     cniTextLayout.error = null
                     cniTextLayout.isErrorEnabled = false
                 }else {
-                    cniTextLayout.error = "CIN is incorrect"
+                    cniTextLayout.error = "CIN format is incorrect"
                     cniTextLayout.isErrorEnabled = true
                     cniField.addTextChangedListener { text ->
 
@@ -171,7 +173,7 @@ class SignUp : Fragment(R.layout.signup_activity) {
                     cneTextLayout.error = null
                     cneTextLayout.isErrorEnabled = false
                 }else {
-                    cneTextLayout.error = "CNE is incorrect"
+                    cneTextLayout.error = "CNE format is incorrect"
                     cneTextLayout.isErrorEnabled = true
                     cneField.addTextChangedListener { text ->
 
@@ -183,7 +185,7 @@ class SignUp : Fragment(R.layout.signup_activity) {
         }
         dateNaissanceField.setOnFocusChangeListener { _, hasFocus ->
             if (hasFocus) {
-                dateNaissanceField.hint = "jj/mm/aaaa"
+                dateNaissanceField.hint = "jj/mm/aaaa | type just the numbers"
 
             } else {
                 dateNaissanceField.hint = ""
@@ -196,7 +198,7 @@ class SignUp : Fragment(R.layout.signup_activity) {
                     dateNTextLayout.error = null
                     dateNTextLayout.isErrorEnabled = false
                 }else {
-                    dateNTextLayout.error = "birthday is incorrect"
+                    dateNTextLayout.error = "birthday format is incorrect"
                     dateNTextLayout.isErrorEnabled = true
                     dateNaissanceField.addTextChangedListener { text ->
 
@@ -217,7 +219,7 @@ class SignUp : Fragment(R.layout.signup_activity) {
                     dateNTextLayout.error = null
                     dateNTextLayout.isErrorEnabled = false
                 }else {
-                    telTextLayout.error = "phone is not correct"
+                    telTextLayout.error = "phone format is  incorrect"
                     telTextLayout.isErrorEnabled = true
                     telField.addTextChangedListener { text ->
 
@@ -260,6 +262,40 @@ class SignUp : Fragment(R.layout.signup_activity) {
                 }
             }
         }
+        dateNaissanceField.addTextChangedListener(object : TextWatcher {
+            private var isEditing = false
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+
+            override fun afterTextChanged(s: Editable?) {
+                if (isEditing) return
+
+                isEditing = true
+                val text = s.toString().replace("/", "") // Remove existing slashes
+                val formattedText = formatDateString(text)
+                dateNaissanceField.setText(formattedText)
+                dateNaissanceField.setSelection(formattedText.length) // Move cursor to the end
+                isEditing = false
+            }
+
+            private fun formatDateString(input: String): String {
+                val builder = StringBuilder()
+                if (input.length > 2) {
+                    builder.append(input.substring(0, 2)).append("/")
+                    if (input.length > 4) {
+                        builder.append(input.substring(2, 4)).append("/")
+                        builder.append(input.substring(4, minOf(input.length, 8)))
+                    } else {
+                        builder.append(input.substring(2))
+                    }
+                } else {
+                    builder.append(input)
+                }
+                return builder.toString()
+            }
+        })
     }
 
     private fun createUser(

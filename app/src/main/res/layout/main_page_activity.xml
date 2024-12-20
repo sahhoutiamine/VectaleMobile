@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/vectaleColorBg">
+    style="@style/bgStyle">
 
 
     <ImageView
@@ -32,7 +32,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/card_background">
+            style="@style/cardBgStyle">
 
 
             <TextView
@@ -81,9 +81,8 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="25dp"
                 android:layout_marginBottom="30dp"
-                android:text="code"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="15sp"
                 android:textStyle="bold"/>
 
             <TextView
@@ -92,9 +91,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="21dp"
+                android:layout_marginEnd="20dp"
                 android:layout_marginBottom="30dp"
-                android:text="213456982"
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold"/>
@@ -134,9 +132,9 @@
         android:id="@+id/switchToRib"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="15dp"
         android:text="@string/bill_payment"
         android:background="@drawable/button_costum"
         style="@style/TextStyle"

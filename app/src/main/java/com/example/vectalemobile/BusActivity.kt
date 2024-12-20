@@ -37,6 +37,16 @@ class BusActivity : AppCompatActivity() {
 
 
 
+        busListView.setOnItemClickListener { _, _, position, _ ->
+            val selectedStation = busList[position].busStation
+
+
+            val intent = Intent(this, BusDetailActivity::class.java).apply {
+                putExtra("busStationName", selectedStation)
+            }
+            startActivity(intent)
+        }
+
         vectaleLogo.setOnClickListener {
             val intent = Intent(this, NavFrActivity::class.java)
             startActivity(intent)

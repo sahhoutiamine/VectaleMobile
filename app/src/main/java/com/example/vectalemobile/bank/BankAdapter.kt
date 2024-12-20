@@ -18,7 +18,7 @@ import com.example.vectalemobile.RibActivity
 class BankAdapter(
     private val context: Context,
     private val bankList: List<Bank>,
-    private val onImageSelected: (Int, Uri) -> Unit // Callback for image selection
+    private val onImageSelected: (Int, Uri) -> Unit
 ) : RecyclerView.Adapter<BankAdapter.BankViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BankViewHolder {
@@ -31,16 +31,16 @@ class BankAdapter(
         holder.bankName.text = bank.name
         holder.bankNumber.text = bank.rib
 
-        // Initially hide the "Send" button and URI TextView
+
         holder.sendButton.visibility = View.GONE
         holder.imageUriTextView.visibility = View.GONE
 
-        // Handle image selection
+
         holder.uploadImageButton.setOnClickListener {
-            onImageSelected(position, Uri.EMPTY) // Trigger the image picker for this position
+            onImageSelected(position, Uri.EMPTY)
         }
 
-        // Handle "Send" button click
+
         holder.sendButton.setOnClickListener {
             holder.selectedImageUri?.let { uri ->
                 ReceiptStorage().receiptList.add(uri) // Save URI to ReceiptStorage

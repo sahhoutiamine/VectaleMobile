@@ -32,6 +32,8 @@
         <activity android:name=".NavFrActivity"/>
         <activity android:name=".BusActivity"/>
         <activity android:name=".RibActivity"/>
+        <activity android:name=".BusDetailActivity" />
+
     </application>
 
 </manifest>

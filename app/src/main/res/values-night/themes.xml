@@ -3,4 +3,69 @@
     <style name="Base.Theme.VectaleMobile" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/vectaleColor</item></style>
     <style name="Theme.VectaleMobile" parent="Base.Theme.VectaleMobile" />
+    <style name="TextStyle">
+        <!-- Font family: Clean and elegant -->
+        <item name="android:fontFamily">monospace</item>
+
+        <!-- Font weight and style -->
+        <item name="android:textStyle">bold</item>
+
+        <!-- Size: Accessible and responsive -->
+        <item name="android:textSize">16sp</item>
+
+        <!-- Line spacing for better readability -->
+        <item name="android:lineSpacingExtra">4dp</item>
+
+
+
+
+        <item name="android:textColor">@color/white</item>
+
+
+
+
+
+        <!-- Text alignment -->
+        <item name="android:textAlignment">center</item> <!-- Align left-to-right based on locale -->
+
+    </style>
+    <style name="TitleTextStyle">
+        <!-- Font family: Medium weight sans-serif for clean and modern look -->
+        <item name="android:fontFamily">monospace</item>
+
+        <!-- Text size: Large for clear emphasis -->
+        <item name="android:textSize">22sp</item>
+
+
+
+        <!-- Alignment: Left aligned for natural reading -->
+        <item name="android:textAlignment">center</item>
+
+        <!-- Extra spacing between lines -->
+        <item name="android:lineSpacingExtra">2dp</item>
+
+        <!-- Style: Bold for strong visual hierarchy -->
+        <item name="android:textStyle">bold</item>
+
+
+        <item name="android:textColor">@color/white</item>
+
+
+    </style>
+    <style name="bgStyle">
+
+
+
+        <item name="android:background">@color/vectaleColorBgDark</item>
+
+
+    </style>
+    <style name="cardBgStyle">
+
+
+
+        <item name="android:background">@drawable/card_dark</item>
+
+
+    </style>
 </resources>

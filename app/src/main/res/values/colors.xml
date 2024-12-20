@@ -6,6 +6,7 @@
     <color name="red">#FF0000</color>
     <color name="vectaleColor">#9DC423</color>
     <color name="vectaleColorBg">#2910B981</color>
+    <color name="vectaleColorBgDark">#29263840</color>
     <color name="dGrey">#1E1D1B</color>
     <color name="customBlue">#2196F3</color>
 

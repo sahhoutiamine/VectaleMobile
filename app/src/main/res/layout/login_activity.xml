@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="@color/vectaleColorBg">
+    style="@style/bgStyle">
 
     <ImageView
         android:id="@+id/vectaleLogo"
@@ -27,13 +27,11 @@
 
             <TextView
                 android:id="@+id/titleWelcomeEnglish"
-                style="@style/TextStyle"
+                style="@style/TitleTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="52dp"
+                android:layout_marginTop="50dp"
                 android:text="@string/welcome"
-                android:textColor="@android:color/black"
-                android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -141,9 +139,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/are_you_new"
-                    android:textSize="16sp"
-                    style="@style/TextStyle"
-                    android:textColor="@android:color/black" />
+                    style="@style/TextStyle" />
 
                 <TextView
                     android:id="@+id/switchToSignUpButton"

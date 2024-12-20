@@ -19,19 +19,19 @@ class RibActivity : AppCompatActivity() {
     private val imagePicker = registerForActivityResult(ActivityResultContracts.GetContent()) { uri: Uri? ->
         uri?.let {
             selectedPosition?.let { position ->
-                adapter.updateItemWithImage(position, it) // Update the adapter with the selected URI
+                adapter.updateItemWithImage(position, it)
             }
         }
     }
-    private var selectedPosition: Int? = null // To track the position of the item being updated
+    private var selectedPosition: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.rib_activity)
 
         bankList = mutableListOf(
-            Bank("Bank 1", "123456"),
-            Bank("Bank 2", "987654")
+            Bank("Bank 1", "1234569876545678"),
+            Bank("Bank 2", "9876549876787654")
         )
 
         adapter = BankAdapter(this, bankList) { position, _ ->
