@@ -17,7 +17,7 @@ class User(
         if (isValid(newEmail, "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")) {
             userEmail = newEmail
         } else {
-            throw IllegalArgumentException("email is incorrect")
+            throw IllegalArgumentException("email form is incorrect")
         }
     }
 
@@ -25,7 +25,7 @@ class User(
         if (newPassword.length >= 8) {
             userPassword = newPassword
         } else {
-            throw IllegalArgumentException("password is incorrect")
+            throw IllegalArgumentException("password is too low")
         }
     }
 

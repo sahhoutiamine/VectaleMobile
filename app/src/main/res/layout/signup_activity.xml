@@ -2,26 +2,26 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="16dp"
-    android:background="@drawable/bus"
+    android:background="@color/vectaleColorBg"
     xmlns:android="http://schemas.android.com/apk/res/android">
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="2dp">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+    <ImageView
+        android:id="@+id/vectaleLogoSignUp"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
 
-        <ImageView
-            android:id="@+id/vectaleLogoSignUp"
-            android:layout_width="180dp"
-            android:layout_height="45dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logo" />
 
         <TextView
             android:id="@+id/signUpTitle"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="64dp"
             android:text="@string/sign_up_to_vectale"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="25sp"
             style="@style/TextStyle"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,10 +43,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:text="@string/or"
+            android:textColor="@color/black"
             android:textSize="20sp"
-            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.437"
+            app:layout_constraintHorizontal_bias="0.397"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/signUpTitle" />
 
@@ -69,7 +69,7 @@
             android:id="@+id/signUpCardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             app:cardCornerRadius="10dp"

@@ -9,7 +9,7 @@
         <item name="android:textStyle">bold</item>
 
         <!-- Size: Accessible and responsive -->
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">16sp</item>
 
         <!-- Line spacing for better readability -->
         <item name="android:lineSpacingExtra">4dp</item>
@@ -24,7 +24,7 @@
     <item name="android:fontFamily">monospace</item>
 
     <!-- Text size: Large for clear emphasis -->
-    <item name="android:textSize">24sp</item>
+    <item name="android:textSize">22sp</item>
 
 
 

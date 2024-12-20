@@ -5,14 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="@drawable/bus">
+    android:background="@color/vectaleColorBg">
 
-
+    <ImageView
+        android:id="@+id/vectaleLogo"
+        android:layout_width="180dp"
+        android:layout_height="45dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:layout_marginTop="60dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -20,79 +27,14 @@
 
             <TextView
                 android:id="@+id/titleWelcomeEnglish"
+                style="@style/TextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="76dp"
-                style="@style/TextStyle"
+                android:layout_marginTop="52dp"
                 android:text="@string/welcome"
-                android:textColor="@android:color/white"
-                android:textSize="28sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/titleWelcomeSpanish"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="44dp"
-                android:layout_marginEnd="32dp"
-                android:text="@string/bienvenido"
-                android:textColor="@color/vectaleColor"
-                android:textSize="28sp"
-                style="@style/TextStyle"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/titleWelcomeFrench"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="140dp"
-                android:layout_marginTop="136dp"
-                style="@style/TextStyle"
-                android:text="@string/bienvenue"
-                android:textColor="@android:color/white"
-                android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/titleWelcomeGerman"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="236dp"
-                android:layout_marginEnd="72dp"
-                style="@style/TextStyle"
-                android:text="@string/willkommen"
-                android:textColor="@android:color/white"
-                android:textSize="26sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/titleWelcomeArabic"
-                style="@style/TextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="180dp"
-                android:text="@string/welcomeArabic"
-                android:textColor="@color/vectaleColor"
-                android:textSize="26sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/titleWelcomeJapanese"
-                style="@style/TextStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="272dp"
-                android:layout_marginTop="168dp"
-                android:text="@string/welcomeJapanese"
-                android:textColor="@color/vectaleColor"
-                android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -100,13 +42,14 @@
                 android:id="@+id/LoginCardView"
                 android:layout_width="360dp"
                 android:layout_height="340dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="100dp"
                 android:layout_marginEnd="10dp"
                 app:cardCornerRadius="10dp"
+                app:layout_constraintTop_toBottomOf="@id/titleWelcomeEnglish"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/titleWelcomeArabic">
+                tools:layout_editor_absoluteY="316dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -121,8 +64,8 @@
                         android:layout_marginTop="20dp"
                         android:layout_marginEnd="20dp"
                         android:hint="@string/email"
-                        app:errorEnabled="true"
                         app:endIconMode="clear_text"
+                        app:errorEnabled="true"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
@@ -146,9 +89,9 @@
                         android:layout_marginEnd="20dp"
                         android:hint="@string/password"
 
-                        app:errorEnabled="true"
                         android:paddingBottom="20dp"
                         app:endIconMode="password_toggle"
+                        app:errorEnabled="true"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/emailLoginText"
@@ -164,6 +107,7 @@
 
                     <Button
                         android:id="@+id/loginButton"
+                        style="@style/TextStyle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
@@ -171,8 +115,6 @@
                         android:layout_marginEnd="20dp"
                         android:background="@drawable/button_costum"
                         android:text="@string/log_in"
-                        android:textColor="@android:color/white"
-                        style="@style/TextStyle"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
@@ -201,7 +143,7 @@
                     android:text="@string/are_you_new"
                     android:textSize="16sp"
                     style="@style/TextStyle"
-                    android:textColor="@android:color/white" />
+                    android:textColor="@android:color/black" />
 
                 <TextView
                     android:id="@+id/switchToSignUpButton"
@@ -214,18 +156,8 @@
                     style="@style/TextStyle" />
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/vectaleLogo"
-                android:layout_width="180dp"
-                android:layout_height="45dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/logo" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-

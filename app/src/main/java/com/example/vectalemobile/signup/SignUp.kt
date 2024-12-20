@@ -232,6 +232,7 @@ class SignUp : Fragment(R.layout.signup_activity) {
             val password = editable.toString()
 
             val isLongEnough = password.length >= 8
+            val isnothing = password.isEmpty()
             val hasSymbol = password.any { it.isLetterOrDigit().not() }
             val hasNumber = password.any { it.isDigit() }
 
@@ -244,6 +245,9 @@ class SignUp : Fragment(R.layout.signup_activity) {
                 }
                 !hasNumber -> {
                     pwTextLayout.helperText = "Password must contain at least one number"
+                }
+                isnothing -> {
+                    pwTextLayout.helperText =" "
                 }
                 else -> {
                     pwTextLayout.helperText = "Password is strong!"

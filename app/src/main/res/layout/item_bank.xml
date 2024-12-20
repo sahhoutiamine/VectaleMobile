@@ -1,0 +1,53 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/bankName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bank Name"
+        android:textSize="16sp"/>
+
+
+    <TextView
+        android:id="@+id/bankNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bank Number"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"/>
+
+
+    <Button
+        android:id="@+id/uploadImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/upload_image"
+        android:background="@drawable/button_costum"
+        android:layout_marginTop="16dp"/>
+
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send"
+        android:background="@drawable/button_costum"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:id="@+id/imageUriTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

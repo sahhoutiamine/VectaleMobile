@@ -10,7 +10,7 @@ import com.example.vectalemobile.R
 
 class BusAdapter(
     private val context: Context,
-    private val dataList: List<DataBus>
+    private val dataList: List<Bus>
 ) : BaseAdapter() {
 
     override fun getCount(): Int = dataList.size
@@ -25,7 +25,7 @@ class BusAdapter(
         val busNumber = view.findViewById<TextView>(R.id.busNumber)
         val busStation = view.findViewById<TextView>(R.id.busStation)
 
-        val dataBus = getItem(position) as DataBus
+        val dataBus = getItem(position) as Bus
         busNumber.text = dataBus.numberBus
         busStation.text = dataBus.busStation
 

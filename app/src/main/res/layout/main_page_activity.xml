@@ -8,7 +8,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/vectaleLogoMain"
         android:layout_width="172dp"
         android:layout_height="34dp"
         android:layout_marginTop="16dp"
@@ -27,7 +27,7 @@
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageView">
+        app:layout_constraintTop_toBottomOf="@id/vectaleLogoMain">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -37,31 +37,31 @@
 
             <TextView
                 android:id="@+id/first_name"
-                style="@style/TextStyle"
-                android:layout_width="125dp"
-                android:layout_height="25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="70dp"
-                android:layout_marginEnd="109dp"
+                android:layout_marginTop="66dp"
+                android:layout_marginEnd="116dp"
                 android:layout_toStartOf="@+id/user_icon"
                 android:text="ABDERRAZAK"
-                android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/last_name"
+                style="@style/TextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/first_name"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="26dp"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="10dp"
                 android:text="ERRIFAOUY"
-                style="@style/TextStyle"
-                android:textColor="#000000"
-                android:textSize="16sp"/>
+                android:textColor="@color/black"
+                android:textSize="14sp" />
 
             <ImageView
                 android:id="@+id/user_icon"
@@ -79,12 +79,12 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="38dp"
+                android:layout_marginStart="25dp"
                 android:layout_marginBottom="30dp"
-                style="@style/TextStyle"
                 android:text="code"
-                android:textColor="#000000"
-                android:textSize="15sp" />
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/code_number"
@@ -94,10 +94,10 @@
                 android:layout_alignParentBottom="true"
                 android:layout_marginEnd="21dp"
                 android:layout_marginBottom="30dp"
-                style="@style/TextStyle"
                 android:text="213456982"
-                android:textColor="#000000"
-                android:textSize="14sp" />
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -130,6 +130,23 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/switchToRib"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:text="@string/bill_payment"
+        android:background="@drawable/button_costum"
+        style="@style/TextStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activityCardView"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
