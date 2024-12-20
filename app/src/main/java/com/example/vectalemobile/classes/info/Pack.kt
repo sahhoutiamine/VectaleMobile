@@ -6,11 +6,11 @@ import java.util.Calendar
 class Pack(
     val code: String,
     val idUser: Int,
-    val packType: String,
+    val packType: PackType,
     val createDate: Date,
     val endDate: Date
 ) {
-    constructor(code: String, idUser: Int, packType: String) : this(
+    constructor(code: String, idUser: Int, packType: PackType) : this(
         code,
         idUser,
         packType,

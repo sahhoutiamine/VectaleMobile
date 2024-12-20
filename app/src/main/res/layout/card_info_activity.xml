@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="341dp"
+        android:layout_height="93dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="151dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/img" />
+
+    <TextView
+        android:id="@+id/nom"
+        android:layout_width="145dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="abderrazak"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/Prenom"
+        android:layout_width="139dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="20dp"
+        android:text="Errifaouy"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/nom"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="@+id/nom"
+        app:layout_constraintTop_toBottomOf="@+id/nom" />
+
+    <TextView
+        android:id="@+id/code"
+        android:layout_width="137dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:text="H1Sf8R8H44"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/Prenom"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Prenom"
+        app:layout_constraintTop_toBottomOf="@+id/Prenom" />
+
+    <TextView
+        android:id="@+id/EmailText"
+        android:layout_width="96dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="Email"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/EmailInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="48dp"
+        android:text="abderrzakrifaouy@gmail.com"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/code"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@+id/code"
+        app:layout_constraintTop_toBottomOf="@+id/code" />
+
+
+    <TextView
+        android:id="@+id/phoneText"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="26dp"
+        android:text="Phone"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmailText" />
+
+    <TextView
+        android:id="@+id/Phone"
+        android:layout_width="170dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="26dp"
+        android:text="0656561323"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/code"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/EmailInfo"
+        app:layout_constraintTop_toBottomOf="@+id/EmailText" />
+
+    <TextView
+        android:id="@+id/CNE"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="26dp"
+        android:text="CNE"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/phoneText"
+        app:layout_constraintTop_toBottomOf="@+id/phoneText" />
+
+
+    <TextView
+        android:id="@+id/CNEInfo"
+        android:layout_width="170dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="26dp"
+        android:text="K656561323"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/Phone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Phone"
+        app:layout_constraintTop_toBottomOf="@+id/Phone" />
+
+    <TextView
+        android:id="@+id/CNI"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginTop="26dp"
+        android:text="cni"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@id/CNE"
+        app:layout_constraintTop_toBottomOf="@+id/CNE" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

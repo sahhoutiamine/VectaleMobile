@@ -9,8 +9,8 @@ class Card(
     var disponible: Boolean
 ) {
     val listPayments = mutableListOf<PaymentRib>()
-    var active: Boolean = false
-    var check = false
+    var active: Boolean = true
+    var check = true
     fun isActive(){
         val thisDate = Date()
 

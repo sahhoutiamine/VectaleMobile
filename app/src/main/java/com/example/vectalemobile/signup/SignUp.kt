@@ -320,7 +320,8 @@ class SignUp : Fragment(R.layout.signup_activity) {
                 cni,
                 cne,
                 email,
-                pass
+                pass ,
+                userimg = R.drawable.img
             )
             "Registration successful!!"
         } catch (e: Exception) {

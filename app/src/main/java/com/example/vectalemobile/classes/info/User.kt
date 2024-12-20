@@ -10,7 +10,8 @@ class User(
     val cni: String,
     val cne: String,
     var userEmail: String,
-    var userPassword: String
+    var userPassword: String ,
+    var userimg : Int
 ) {
 
     fun setEmail(newEmail: String) {

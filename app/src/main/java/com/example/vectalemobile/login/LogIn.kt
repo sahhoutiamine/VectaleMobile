@@ -82,6 +82,7 @@ class LogIn : Fragment() {
             val check = FunctionsClass().findUser(loginEmail.text.toString(), loginPassword.text.toString())
             if (check != -1) {
                 val intent = Intent(requireContext(), MainPage::class.java)
+                intent.putExtra("PUser", check)
                 startActivity(intent)
                 requireActivity().finish()
             } else {
