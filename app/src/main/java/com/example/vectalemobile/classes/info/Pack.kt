@@ -19,6 +19,7 @@ class Pack(
     )
 
     companion object {
+
         private fun calculateEndDate(): Date {
             val calendar = Calendar.getInstance()
             calendar.time = java.util.Date()

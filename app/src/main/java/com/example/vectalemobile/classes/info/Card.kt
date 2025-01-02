@@ -8,7 +8,7 @@ class Card(
     val code: String,
     var disponible: Boolean
 ) {
-    val listPayments = mutableListOf<PaymentRib>()
+
     var active: Boolean = true
     var check = true
     fun isActive(){

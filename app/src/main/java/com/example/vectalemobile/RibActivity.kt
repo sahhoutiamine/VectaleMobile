@@ -29,10 +29,19 @@ class RibActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.rib_activity)
 
-        bankList = mutableListOf(
-            Bank("Bank 1", "1234569876545678"),
-            Bank("Bank 2", "9876549876787654")
+        val bankList = mutableListOf(
+            Bank("Bank of America", "1234567812345678"),
+            Bank("Chase Bank", "2345678923456789"),
+            Bank("Wells Fargo", "3456789034567890"),
+            Bank("Citibank", "4567890145678901"),
+            Bank("Capital One", "5678901256789012"),
+            Bank("US Bank", "6789012367890123"),
+            Bank("PNC Bank", "7890123478901234"),
+            Bank("TD Bank", "8901234589012345"),
+            Bank("BB&T (now Truist)", "9012345690123456"),
+            Bank("SunTrust (now Truist)", "0123456701234567")
         )
+
 
         adapter = BankAdapter(this, bankList) { position, _ ->
             selectedPosition = position

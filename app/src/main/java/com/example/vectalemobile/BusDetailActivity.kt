@@ -21,7 +21,19 @@ class BusDetailActivity : AppCompatActivity() {
         titleTextView.text = busStationName
 
 
-        val stationDetails = listOf("Stop 1", "Stop 2", "Stop 3")
+        val stationDetails = listOf(
+            "Times Square, New York",
+            "Downtown Crossing, Boston",
+            "Capitol Hill, Washington, DC",
+            "Liberty Bell, Philadelphia",
+            "Millennium Park, Chicago",
+            "Centennial Olympic Park, Atlanta",
+            "Hollywood, Los Angeles",
+            "Union Square, San Francisco",
+            "Pike Place Market, Seattle",
+            "South Beach, Miami"
+        )
+
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, stationDetails)
         detailListView.adapter = adapter
     }

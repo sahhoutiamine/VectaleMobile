@@ -72,5 +72,13 @@
 
 
     </style>
+    <style name="BgStyle">
+
+
+
+        <item name="android:background">@color/white</item>
+
+
+    </style>
 
 </resources>

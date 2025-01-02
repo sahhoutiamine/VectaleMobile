@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.VectaleMobile" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">@color/vectaleColor</item></style>
+        <item name="colorPrimary">@color/vectaleColorDark</item></style>
     <style name="Theme.VectaleMobile" parent="Base.Theme.VectaleMobile" />
     <style name="TextStyle">
         <!-- Font family: Clean and elegant -->
@@ -65,6 +65,14 @@
 
 
         <item name="android:background">@drawable/card_dark</item>
+
+
+    </style>
+    <style name="BgStyle">
+
+
+
+        <item name="android:background">@color/black</item>
 
 
     </style>

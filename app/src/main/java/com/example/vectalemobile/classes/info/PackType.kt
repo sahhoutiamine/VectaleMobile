@@ -1,3 +1,3 @@
 package com.example.vectalemobile.classes.info
 
-enum class PackType { Normal, Pro, Vip }
+enum class PackType { Student, Citizen, Tourist }

@@ -11,7 +11,7 @@ class User(
     val cne: String,
     var userEmail: String,
     var userPassword: String ,
-    var userimg : Int
+
 ) {
 
     fun setEmail(newEmail: String) {

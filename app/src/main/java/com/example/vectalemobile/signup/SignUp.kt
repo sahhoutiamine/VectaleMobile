@@ -2,8 +2,6 @@ package com.example.vectalemobile.signup
 
 import android.app.AlertDialog
 import android.content.Intent
-import android.content.res.ColorStateList
-import android.graphics.Color
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffColorFilter
 import android.graphics.drawable.Drawable
@@ -22,11 +20,18 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.vectalemobile.R
-import com.example.vectalemobile.classes.data.Lists
+import com.example.vectalemobile.classes.data.createdUserId
+import com.example.vectalemobile.classes.data.listCards
+import com.example.vectalemobile.classes.data.listPacks
+import com.example.vectalemobile.classes.data.listUsers
+import com.example.vectalemobile.classes.info.Card
+import com.example.vectalemobile.classes.info.Pack
+import com.example.vectalemobile.classes.info.PackType
 import com.example.vectalemobile.classes.info.User
 import com.example.vectalemobile.classes.info.User.Companion.isValid
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
+import kotlin.random.Random
 
 class SignUp : Fragment(R.layout.signup_activity) {
 
@@ -53,6 +58,34 @@ class SignUp : Fragment(R.layout.signup_activity) {
         val telTextLayout = view.findViewById<TextInputLayout>(R.id.telSignUpText)
 
         val vectaleLogoSU = view.findViewById<ImageView>(R.id.vectaleLogoSignUp)
+        var fTypePack = PackType.Student
+
+        val normalPackCard = view.findViewById<View>(R.id.normalPackCard)
+        val proPackCard = view.findViewById<View>(R.id.proPackCard)
+        val vipPackCard = view.findViewById<View>(R.id.vipPackCard)
+
+
+
+
+
+        normalPackCard.setOnClickListener {
+            fTypePack = PackType.Student
+            Toast.makeText(requireContext(), "Normal Pack selected!", Toast.LENGTH_SHORT).show()
+        }
+
+        proPackCard.setOnClickListener {
+            fTypePack = PackType.Citizen
+            Toast.makeText(requireContext(), "Pro Pack selected!", Toast.LENGTH_SHORT).show()
+        }
+
+        vipPackCard.setOnClickListener {
+            fTypePack = PackType.Tourist
+            Toast.makeText(requireContext(), "VIP Pack selected!", Toast.LENGTH_SHORT).show()
+        }
+
+
+
+
 
         vectaleLogoSU.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.vectalia.ma/safi/presentation"))
@@ -70,6 +103,7 @@ class SignUp : Fragment(R.layout.signup_activity) {
             val cni = cniField.text?.toString().orEmpty()
             val password = passwordField.text?.toString().orEmpty()
             val verificationPassword = verPasswordField.text?.toString().orEmpty()
+            val typePack = fTypePack
 
             if (password != verificationPassword) {
                 Toast.makeText(requireContext(), "The passwords do not match", Toast.LENGTH_SHORT).show()
@@ -80,14 +114,42 @@ class SignUp : Fragment(R.layout.signup_activity) {
                 Toast.makeText(requireContext(), "fill the inputs or Fix the errors first!", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
+            val user = User(
+                listUsers.size,
+                nom,
+                prenom,
+                tel,
+                dateNaissance,
+                ville,
+                cni,
+                cne,
+                email,
+                password
+            )
+            listUsers.add(user)
 
-            val message = createUser(nom, prenom, tel, email, dateNaissance, ville, cne, cni, password)
 
-            if (message == "Registration successful!!") {
-                showSuccessDialog()
-            } else {
-                Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+            fun randomNumbers(): String {
+                return List(12) { Random.nextInt(0, 10) }.joinToString("") // Generates digits (0-9) and concatenates them
             }
+
+            val pack = Pack(randomNumbers() , user.id ,typePack)
+
+            val card = Card(listCards.size , pack.code , false)
+
+
+            if (listUsers.add(user)) {
+                listPacks.add(pack)
+                showSuccessDialog()
+                createdUserId=user.id
+            }
+
+            if (listPacks.add(pack)) {
+                listCards.add(card)
+
+            }
+
+
         }
 
         view.findViewById<TextView>(R.id.switchToLoginButton).setOnClickListener {
@@ -162,30 +224,10 @@ class SignUp : Fragment(R.layout.signup_activity) {
                 }
             }
         }
-        cneField.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                val cneText = cneField.text?.toString().orEmpty()
 
-                if (isValid(cneText, "^[A-Z]\\d{9}$")) {
-                    cneTextLayout.error = null
-                    cneTextLayout.isErrorEnabled = false
-                } else if (cneText.isEmpty()) {
-                    cneTextLayout.error = null
-                    cneTextLayout.isErrorEnabled = false
-                }else {
-                    cneTextLayout.error = "CNE format is incorrect"
-                    cneTextLayout.isErrorEnabled = true
-                    cneField.addTextChangedListener { text ->
-
-                        cneTextLayout.error = null
-                        cneTextLayout.isErrorEnabled = false
-                    }
-                }
-            }
-        }
         dateNaissanceField.setOnFocusChangeListener { _, hasFocus ->
             if (hasFocus) {
-                dateNaissanceField.hint = "jj/mm/aaaa | type just the numbers"
+                dateNaissanceField.hint = "jj/mm/aaaa "
 
             } else {
                 dateNaissanceField.hint = ""
@@ -234,7 +276,7 @@ class SignUp : Fragment(R.layout.signup_activity) {
             val password = editable.toString()
 
             val isLongEnough = password.length >= 8
-            val isnothing = password.isEmpty()
+            val isNothing = password.isEmpty()
             val hasSymbol = password.any { it.isLetterOrDigit().not() }
             val hasNumber = password.any { it.isDigit() }
 
@@ -248,12 +290,11 @@ class SignUp : Fragment(R.layout.signup_activity) {
                 !hasNumber -> {
                     pwTextLayout.helperText = "Password must contain at least one number"
                 }
-                isnothing -> {
+                isNothing -> {
                     pwTextLayout.helperText =" "
                 }
                 else -> {
                     pwTextLayout.helperText = "Password is strong!"
-                    pwTextLayout.setHelperTextColor(ColorStateList.valueOf(Color.GREEN))
                     pwTextLayout.setOnFocusChangeListener { _, hasFocus ->
                         if (!hasFocus) {
                             pwTextLayout.helperText = ""
@@ -273,10 +314,10 @@ class SignUp : Fragment(R.layout.signup_activity) {
                 if (isEditing) return
 
                 isEditing = true
-                val text = s.toString().replace("/", "") // Remove existing slashes
+                val text = s.toString().replace("/", "")
                 val formattedText = formatDateString(text)
                 dateNaissanceField.setText(formattedText)
-                dateNaissanceField.setSelection(formattedText.length) // Move cursor to the end
+                dateNaissanceField.setSelection(formattedText.length)
                 isEditing = false
             }
 
@@ -298,36 +339,10 @@ class SignUp : Fragment(R.layout.signup_activity) {
         })
     }
 
-    private fun createUser(
-        nom: String,
-        prenom: String,
-        tel: String,
-        email: String,
-        dateNaissance: String,
-        ville: String,
-        cne: String,
-        cni: String,
-        pass: String
-    ): String {
-        return try {
-            val user = User(
-                Lists().listUsers.size,
-                nom,
-                prenom,
-                tel,
-                dateNaissance,
-                ville,
-                cni,
-                cne,
-                email,
-                pass ,
-                userimg = R.drawable.img
-            )
-            "Registration successful!!"
-        } catch (e: Exception) {
-            e.message ?: "A sign up error occurred."
-        }
-    }
+
+
+
+
 
     private fun showSuccessDialog() {
         val dialogBuilder = AlertDialog.Builder(requireContext())
@@ -346,5 +361,6 @@ class SignUp : Fragment(R.layout.signup_activity) {
             .create()
             .show()
     }
+
 }
 

@@ -15,19 +15,18 @@ class BusActivity : AppCompatActivity() {
         setContentView(R.layout.bus_activity)
 
         val busList = listOf(
-            Bus("101", "Central - Station"),
-            Bus("102", "West - Station"),
-            Bus("102", "West - Station"),
-            Bus("102", "West - Station"),
-            Bus("102", "West - Station"),
-            Bus("102", "West - Station"),
-            Bus("102", "West - Station"),
-            Bus("102", "West - Station"),
-            Bus("102", "West - Station"),
-            Bus("102", "West - Station"),
-            Bus("102", "West - Station"),
-            Bus("102", "West - Station")
+            Bus("1", "New York - Port Authority"),
+            Bus("2", "Boston - South Station"),
+            Bus("3", "Washington, DC - Union Station"),
+            Bus("4", "Philadelphia - Greyhound Terminal"),
+            Bus("5", "Chicago - Greyhound Station"),
+            Bus("6", "Atlanta - Civic Center MARTA"),
+            Bus("7", "Los Angeles - Union Station"),
+            Bus("8", "San Francisco - Salesforce Transit"),
+            Bus("9", "Seattle - Greyhound Station"),
+            Bus("10", "Miami - Intermodal Center")
         )
+
 
         val busListView = findViewById<ListView>(R.id.busListView)
         val adapter = BusAdapter(this, busList)

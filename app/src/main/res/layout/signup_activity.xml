@@ -77,7 +77,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="10dp">
 
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -294,6 +294,156 @@
                         android:inputType="text"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/packSelectionLayout"
+                    android:layout_width="365dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/signUpTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/normalPackCard"
+                        android:layout_width="99dp"
+                        android:layout_height="120dp"
+
+                        app:cardCornerRadius="10dp"
+                        app:cardBackgroundColor="@color/vectaleColorBg"
+                        app:layout_constraintWidth_percent="0.3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/normalPackName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/student_t"
+                                android:textStyle="bold"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/normalPackDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/student"
+                                android:textSize="10sp"
+                                android:layout_gravity="center"/>
+
+<!--                            <Button-->
+<!--                                android:id="@+id/chooseNormalPackButton"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_marginTop="30dp"-->
+<!--                                android:text="@string/choose"-->
+<!--                                android:textSize="8sp"/>-->
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/proPackCard"
+                        android:layout_width="99dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="8dp"
+                        app:cardBackgroundColor="@color/vectaleColorBg"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintStart_toEndOf="@id/normalPackCard"
+                        app:layout_constraintTop_toTopOf="@id/normalPackCard"
+                        app:layout_constraintWidth_percent="0.3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/proPackName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/tourist_t"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/proPackDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/citizen"
+                                android:textSize="10sp" />
+
+                            <!--                            <Button-->
+                            <!--                                android:id="@+id/chooseProPackButton"-->
+                            <!--                                android:layout_width="match_parent"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:layout_marginTop="30dp"-->
+                            <!--                                android:text="@string/choose"-->
+                            <!--                                android:textSize="8sp"-->
+                            <!--                                />-->
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/vipPackCard"
+                        android:layout_width="99dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:cardBackgroundColor="@color/vectaleColorBg"
+                        app:cardCornerRadius="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toEndOf="@id/proPackCard"
+                        app:layout_constraintTop_toTopOf="@id/normalPackCard"
+                        app:layout_constraintWidth_percent="0.3">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:id="@+id/vipPackName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/citizen_t"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/vipPackDescription"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="15dp"
+                                android:text="@string/tourist"
+                                android:textSize="10sp" />
+
+                            <!--                            <Button-->
+                            <!--                                android:id="@+id/chooseVipPackButton"-->
+                            <!--                                android:layout_width="match_parent"-->
+                            <!--                                android:layout_height="wrap_content"-->
+                            <!--                                android:layout_marginTop="30dp"-->
+                            <!--                                android:text="@string/choose"-->
+                            <!--                                android:textSize="8sp" />-->
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
                 <com.google.android.material.textfield.TextInputLayout
