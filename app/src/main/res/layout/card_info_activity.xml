@@ -67,16 +67,6 @@
 
             <TextView
 
-                style="@style/TitleTextStyle"
-                android:id="@+id/EmailText"
-                android:text="Email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:layout_marginBottom="4dp" />
-
-            <TextView
-
                 style="@style/TextStyle"
                 android:id="@+id/EmailInfo"
                 android:layout_width="wrap_content"
@@ -84,17 +74,6 @@
                 android:textSize="16sp"
                 android:layout_marginBottom="8dp" />
 
-
-            <TextView
-
-                style="@style/TitleTextStyle"
-
-                android:text="CNE"
-                android:id="@+id/CNE"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:layout_marginBottom="4dp" />
 
             <TextView
 
@@ -108,16 +87,6 @@
 
             <TextView
 
-                style="@style/TitleTextStyle"
-                android:text="CNI"
-                android:id="@+id/CNI"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:layout_marginBottom="4dp" />
-
-            <TextView
-
                 style="@style/TextStyle"
                 android:id="@+id/cniInfo"
                 android:layout_width="wrap_content"
@@ -127,18 +96,8 @@
 
             <TextView
 
-                style="@style/TitleTextStyle"
-                android:id="@+id/birthday"
-                android:text="Birthday"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:layout_marginBottom="4dp" />
-
-            <TextView
-
                 style="@style/TextStyle"
-                android:id="@+id/textView7"
+                android:id="@+id/birthday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="16sp" />
